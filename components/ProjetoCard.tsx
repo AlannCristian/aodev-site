@@ -1,4 +1,5 @@
 import type { Projeto } from "@/data/projetos";
+import Link from "next/link";
 
 export default function ProjetoCard({ projeto }: { projeto: Projeto }) {
   const concluido = projeto.status === "Concluído";
@@ -7,7 +8,9 @@ export default function ProjetoCard({ projeto }: { projeto: Projeto }) {
     <article className="flex flex-col gap-4 rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition hover:shadow-md">
       <div className="flex items-start justify-between gap-4">
         <h2 className="text-xl font-extrabold text-marinho">
-          {projeto.titulo}
+          <Link href={`/projetos/${projeto.slug}`} className="hover:text-azul">
+            {projeto.titulo}
+          </Link>
         </h2>
         <span
           className={`shrink-0 rounded-full px-3 py-1 text-xs font-bold text-marinho ${
