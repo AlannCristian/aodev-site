@@ -1,6 +1,13 @@
 import FormularioOrcamento from "@/components/FormularioOrcamento";
 import { contato } from "@/data/contato";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contato",
+  description: "Trabalhos e estudos de desenvolvimento do Alann Oliveira.",
+};
+
 export default function Contato() {
   return (
     <main className="mx-auto max-w-5xl px-6 py-16">

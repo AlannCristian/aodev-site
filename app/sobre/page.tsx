@@ -1,5 +1,12 @@
 import Link from "next/link";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sobre",
+  description: "Trabalhos e estudos de desenvolvimento do Alann Oliveira.",
+};
+
 const servicos = [
   {
     titulo: "Sites institucionais e portfólios",

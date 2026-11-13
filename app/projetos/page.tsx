@@ -1,6 +1,13 @@
 import ProjetoCard from "@/components/ProjetoCard";
 import { projetos } from "@/data/projetos";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projetos",
+  description: "Trabalhos e estudos de desenvolvimento do Alann Oliveira.",
+};
+
 export default function Projetos() {
   return (
     <main className="mx-auto max-w-5xl px-6 py-16">

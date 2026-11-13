@@ -14,9 +14,21 @@ const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
 export const metadata: Metadata = {
-  title: "AO Dev · Alann Oliveira",
-  description: "Portfólio de desenvolvimento de Alann Oliveira.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "AO Dev · Alann Oliveira",
+    template: "%s · AO Dev",
+  },
+  description:
+    "Portfólio de Alann Oliveira: desenvolvimento de sites, sistemas e lojas virtuais sob medida.",
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    siteName: "AO Dev",
+  },
 };
 
 export default function RootLayout({
